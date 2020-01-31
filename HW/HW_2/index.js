@@ -2,7 +2,9 @@ let numberN = Math.round(parseInt(prompt("input number N"), 10));
 while (isNaN(numberN)) {
   numberN = Math.round(parseInt(prompt("input number N"), 10));
 }
-let numberM = Math.round(parseInt(prompt("input number M"), 10));
+let numberM = Math.round(
+  parseInt(prompt("number M must be greater than N !!!!"), 10)
+);
 while (isNaN(numberN)) {
   numberM = Math.round(
     parseInt(
