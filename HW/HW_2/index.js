@@ -27,4 +27,5 @@ for (let i = numberN; i <= numberM; i++) {
   }
 }
 
+document.body.innerHTML = sum;
 console.log(sum);
