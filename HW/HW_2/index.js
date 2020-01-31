@@ -4,7 +4,12 @@ while (isNaN(numberN)) {
 }
 let numberM = Math.round(parseInt(prompt("input number M"), 10));
 while (isNaN(numberN)) {
-  numberM = Math.round(parseInt(prompt("input number M"), 10));
+  numberM = Math.round(
+    parseInt(
+      prompt("input number M (number M must be greater than N !!!!)"),
+      10
+    )
+  );
 }
 
 const skipEvenNumbers = confirm("Skip even numbers", false);
