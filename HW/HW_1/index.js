@@ -44,7 +44,7 @@ console.log(((priceOne + priceTwo + priceThree) / 3).toFixed(2));
 
 //Для работы функции используется скидка с максимальным значением 49%, иначе скидка будет больше себестоимости
 getLostprofit = price => {
-  let sale = +((price / 100) * randomSale).toFixed(2);
+  let sale = +((price / 100) * randomSale).toFixed(0);
   let toPay = +(price - sale).toFixed(2);
   let lostProfit = (Math.round(price) / 2 - sale).toFixed(2);
   return `price: ${price.toFixed(
