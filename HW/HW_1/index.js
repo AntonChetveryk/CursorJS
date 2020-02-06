@@ -1,6 +1,6 @@
-let priceOne = 15.678;
-let priceTwo = 90.2345;
-let priceThree = 123.965;
+const priceOne = 15.678;
+const priceTwo = 90.2345;
+const priceThree = 123.965;
 
 function randomInteger(min, max) {
   let rand = min - 0.5 + Math.random() * (max - min + 1);
