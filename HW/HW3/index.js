@@ -65,12 +65,15 @@ countLetter("n", "anton");
 function convertCurrency(currency) {
   let value$ = Number(currency.slice(0, currency.length - 1));
   let valueUAH = Number(currency.slice(0, currency.length - 3));
-
-  if (currency.includes("$")) {
-    console.log(`${value$ * 25}UAH`);
-  }
-  if (currency.toUpperCase().includes("UAH")) {
-    console.log(`${valueUAH / 25}$`);
+  if (currency.includes("$") || currency.toUpperCase().includes("UAH")) {
+    if (currency.includes("$")) {
+      console.log(`${value$ * 25}UAH`);
+    }
+    if (currency.toUpperCase().includes("UAH")) {
+      console.log(`${valueUAH / 25}$`);
+    }
+  } else {
+    alert("введите валюту '$' или 'UAH'");
   }
 }
 
