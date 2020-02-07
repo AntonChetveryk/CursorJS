@@ -6,8 +6,13 @@ const themes = [
 ];
 const marks = [4, 5, 5, 3, 4, 5];
 
+function getRandomInteger(min, max) {
+  let rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+}
+
 //1
-function getStudentsPair() {
+function getStudentsPairs() {
   const studentsPairs = [];
   for (let i = 0; i < students.length; i += 2) {
     studentsPairs.push([students[i], students[i + 1]]);
@@ -32,3 +37,15 @@ function matchStudentsMarks() {
 }
 
 //4
+function getRandomMarks() {
+  const pairsMarks = [];
+  getStudentsPairs().map(studentPair =>
+    pairsMarks.push([studentPair.join(" и "), getRandomInteger(1, 5)])
+  );
+  return pairsMarks;
+}
+
+console.log(getStudentsPairs());
+console.log(matchStudentsThemes(getStudentsPairs()));
+console.log(matchStudentsMarks());
+console.log(getRandomMarks());
