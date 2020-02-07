@@ -24,7 +24,7 @@ console.log(
 );
 
 //5
-console.log(Math.round(sum / 100) * 100);
+console.log(Math.ceil(sum / 100) * 100);
 
 //6
 if (Math.floor(sum) % 2 === 0) {
