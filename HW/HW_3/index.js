@@ -8,10 +8,8 @@ function getMaxDigit(number) {
       max = +num;
     }
   }
-  console.log(max);
+  return max;
 }
-
-getMaxDigit(2345879);
 
 //2 - работает только с положительными числами
 function mathPow(num, pow) {
@@ -19,25 +17,21 @@ function mathPow(num, pow) {
   for (let i = 1; i < pow; i++) {
     res *= num;
   }
-  console.log(res);
+  return res;
 }
-
-mathPow(2, 4);
 
 //3
 function getCapitalLetter(str) {
   let newStr = str[0].toUpperCase() + str.substr(1);
-  console.log(newStr);
+  return newStr;
 }
-
-getCapitalLetter("anton");
 
 //4
 
 function getSaleryBalance(salery) {
   let tax = (salery / 100) * 19.5;
   let balance = salery - tax;
-  console.log(balance);
+  return balance;
 }
 
 getSaleryBalance(1000);
@@ -48,18 +42,14 @@ function randomInteger(min, max) {
   return Math.floor(rand);
 }
 
-console.log(randomInteger(1, 10));
-
 //6
 function countLetter(letter, str) {
   let sum = 0;
   for (let i = 0; i < str.length; i++) {
     str[i].toUpperCase() === letter.toUpperCase() ? (sum += 1) : null;
   }
-  console.log(sum);
+  return sum;
 }
-
-countLetter("n", "anton");
 
 //7
 function convertCurrency(currency) {
@@ -67,17 +57,15 @@ function convertCurrency(currency) {
   let valueUAH = Number(currency.slice(0, currency.length - 3));
   if (currency.includes("$") || currency.toUpperCase().includes("UAH")) {
     if (currency.includes("$")) {
-      console.log(`${value$ * 25}UAH`);
+      return `${value$ * 25}UAH`;
     }
     if (currency.toUpperCase().includes("UAH")) {
-      console.log(`${valueUAH / 25}$`);
+      return `${valueUAH / 25}$`;
     }
   } else {
     alert("введите валюту '$' или 'UAH'");
   }
 }
-
-convertCurrency("2500uah");
 
 //8
 function getRandomPassword(length) {
@@ -85,10 +73,8 @@ function getRandomPassword(length) {
   for (let i = 0; i < length; i++) {
     password += randomInteger(1, 9);
   }
-  console.log(Number(password));
+  return Number(password);
 }
-
-getRandomPassword(4);
 
 //9
 function deleteLetters(letter, str) {
@@ -96,7 +82,15 @@ function deleteLetters(letter, str) {
   for (let i = 0; i < str.length; i++) {
     str[i] !== letter ? (newStr += str[i]) : null;
   }
-  console.log(newStr);
+  return newStr;
 }
 
-deleteLetters("n", "anton");
+console.log("Task 1: ", getMaxDigit(2345879));
+console.log("Task 2: ", mathPow(2, 4));
+console.log("Task 3: ", getCapitalLetter("anton"));
+console.log("Task 4: ", getSaleryBalance(1000));
+console.log("Task 5: ", randomInteger(1, 10));
+console.log("Task 6: ", countLetter("n", "anton"));
+console.log("Task 7: ", convertCurrency("2500uah"));
+console.log("Task 8: ", getRandomPassword(4));
+console.log("Task 9: ", deleteLetters("n", "anton"));
