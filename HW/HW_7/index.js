@@ -30,10 +30,12 @@ function getMySalary(country) {
   let salary = getRandomSalary(1500, 2000);
   let taxes = salary * country.tax;
   let profit = salary - taxes;
-  return { salary, taxes, profit };
+  setInterval(() => {
+    console.log({ salary, taxes, profit });
+  }, 10000);
 }
 
 console.log("Task 1: ", getMyTaxes.call(litva, 1000));
 console.log("Task 2: ", getMiddleTaxes.call(litva));
 console.log("Task 3: ", getTotalTaxes.call(litva));
-console.log("Task 4: ", getMySalary(litva));
+getMySalary(ukraine);
