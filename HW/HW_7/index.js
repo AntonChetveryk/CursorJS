@@ -26,9 +26,9 @@ function getTotalTaxes() {
 }
 
 //4
-function getMySalary(country) {
+function getMySalary() {
   let salary = getRandomSalary(1500, 2000);
-  let taxes = salary * country.tax;
+  let taxes = salary * this.tax;
   let profit = salary - taxes;
   setInterval(() => {
     console.log({ salary, taxes, profit });
@@ -38,4 +38,4 @@ function getMySalary(country) {
 console.log("Task 1: ", getMyTaxes.call(litva, 1000));
 console.log("Task 2: ", getMiddleTaxes.call(litva));
 console.log("Task 3: ", getTotalTaxes.call(litva));
-getMySalary(ukraine);
+console.log(getMySalary.call(ukraine));
