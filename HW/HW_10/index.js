@@ -7,7 +7,8 @@ const item = document.querySelectorAll(".item"),
     for (let i = 0; i < item.length; i++) {
       if (keyCode == item[i].id) {
         item[i].classList.add("bigger");
-        item[i].lastElementChild.play();
+        item[i].lastElementChild.currentTime = 0;
+        item[i].children[0].play();
       }
     }
   },

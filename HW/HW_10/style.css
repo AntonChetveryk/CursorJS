@@ -22,5 +22,6 @@ body {
 }
 
 .bigger {
-  background: yellowgreen;
+  box-shadow: 0 0 12px gold;
+  transform: scale(1.2, 1.2);
 }
