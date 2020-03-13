@@ -44,3 +44,4 @@ class Student {
 }
 
 let anton = new Student("AMSU", 3, "Anton Chetveryk");
+console.log(anton);
